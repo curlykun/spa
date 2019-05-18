@@ -13,8 +13,8 @@ function App() {
 			<div>
 				<h2>Semua User</h2>
 				<ul>
-					<li><Link to='user/kurob' >kurob</Link></li>
-					<li><Link to='user/robert' >robert</Link></li>
+					<li><Link to='/spa/user/kurob' >kurob</Link></li>
+					<li><Link to='/spa/user/robert' >robert</Link></li>
 				</ul>
 			</div>
 		) 
