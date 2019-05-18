@@ -13,8 +13,8 @@ function App() {
 			<div>
 				<h2>Semua User</h2>
 				<ul>
-					<li><Link to='/spa/user/kurob' >kurob</Link></li>
-					<li><Link to='/spa/user/robert' >robert</Link></li>
+					<li><Link to='user/kurob' >kurob</Link></li>
+					<li><Link to='user/robert' >robert</Link></li>
 				</ul>
 			</div>
 		) 
@@ -33,14 +33,14 @@ function App() {
 			<div>
 				
 				<nav>
-					<TopNavbar />	
+					<TopNavbar />
 				</nav>
 
 				<main>
 					<Switch>
-						<Route path='/spa' exact component={Home} />
-						<Route path='/spa/users' exact component={ListView} />
-						<Route path='/spa/user/:name' exact component={DetailView} />
+						<Route path='/' exact component={Home} />
+						<Route path='/users' exact component={ListView} />
+						<Route path='/user/:name' exact component={DetailView} />
 						<Route component={NoMatch} />
 					</Switch>
 				</main>
