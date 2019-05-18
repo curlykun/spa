@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import {
     Collapse,
     Navbar,
@@ -13,6 +12,7 @@ import {
     DropdownMenu,
     DropdownItem
 } from 'reactstrap';
+import { NavLink as RRNavLink } from 'react-router-dom';
 
 export default class TopNavbar extends React.Component {
     constructor(props) {
@@ -32,15 +32,15 @@ export default class TopNavbar extends React.Component {
         return (
             <div>
                 <Navbar color="dark" dark expand="md">
-                    <NavbarBrand tag={Link} href="/">Single Page Aplication</NavbarBrand>
+                    <NavbarBrand to="/" tag={RRNavLink}>Single Page Aplication</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink tag={Link} href="/"> Home </NavLink>
+                                <NavLink to="/" tag={RRNavLink}>Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} href="/users">User</NavLink>
+                                <NavLink to="/users" tag={RRNavLink}>User</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
