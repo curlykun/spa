@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import {
     Collapse,
     Navbar,
@@ -31,15 +32,15 @@ export default class TopNavbar extends React.Component {
         return (
             <div>
                 <Navbar color="dark" dark expand="md">
-                    <NavbarBrand href="/">Single Page Aplication</NavbarBrand>
+                    <NavbarBrand tag={Link} href="/">Single Page Aplication</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/">Home</NavLink>
+                                <NavLink tag={Link} href="/"> Home </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/users">User</NavLink>
+                                <NavLink tag={Link} href="/users">User</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
