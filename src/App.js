@@ -38,9 +38,9 @@ function App() {
 
 				<main>
 					<Switch>
-						<Route path='/' exact component={Home} />
-						<Route path='/users' exact component={ListView} />
-						<Route path='/user/:name' exact component={DetailView} />
+						<Route path='/spa' exact component={Home} />
+						<Route path='/spa/users' exact component={ListView} />
+						<Route path='/spa/user/:name' exact component={DetailView} />
 						<Route component={NoMatch} />
 					</Switch>
 				</main>
